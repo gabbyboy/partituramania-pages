@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitarra &middot; Partituramanía</title>
+  <meta name="description" content="5 partituras de Guitarra organizadas por dificultad">
+  <link rel="canonical" href="https://partituramania.com/guitarra/">
+  <link rel="alternate" type="application/rss+xml" title="Partituramanía" href="/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Partituramanía">
+  <meta property="og:url" content="https://partituramania.com/guitarra/">
+  <meta property="og:title" content="Guitarra &middot; Partituramanía">
+  <meta property="og:description" content="5 partituras de Guitarra organizadas por dificultad">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Guitarra &middot; Partituramanía">
+  <meta name="twitter:description" content="5 partituras de Guitarra organizadas por dificultad">
+  
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Anti-parpadeo: si el usuario ya eligió un tema a mano, aplicarlo antes
+    // de pintar la página (si no hizo elección, la preferencia del sistema
+    // ya la resuelve el CSS solo, sin necesidad de JS).
+    (function () {
+      try {
+        var t = localStorage.getItem("pm-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="sitio-header">
+  <div class="contenedor sitio-header__inner">
+    <a class="logo" href="/">Partituramanía</a>
+    <nav class="nav-instrumentos">
+      <a href="/" data-i18n="inicio">Inicio</a>
+      <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+      <a href="/libros/" data-i18n="libros">Libros</a>
+      <a href="/autores/" data-i18n="autores">Autores</a>
+      <a href="/estadisticas/" data-i18n="estadisticas">Estadísticas</a>
+      <button class="boton-sorpresa js-boton-sorpresa" type="button">🎲 <span data-i18n="sorprendeme">Sorpréndeme</span></button>
+    </nav>
+    <div class="sitio-header__botones">
+      <button id="theme-toggle" class="lang-toggle" type="button">🌙</button>
+      <button id="lang-toggle" class="lang-toggle" type="button">🇺🇸</button>
+    </div>
+  </div>
+</header>
+
+  <main class="contenedor">
+    
+<nav class="migas" aria-label="Breadcrumb">
+  <a href="/" data-i18n="inicio">Inicio</a>
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+  
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <span class="migas__actual">Guitarra</span>
+  
+  
+</nav>
+
+
+<h1 class="titulo-instrumento">Guitarra</h1>
+<p class="listado-resumen">5 <span data-i18n="partituras">partituras</span></p>
+
+
+<section class="seccion-libros">
+  <h2 data-i18n="libros">Libros</h2>
+  <div class="grilla-libros">
+    
+      <a class="tarjeta tarjeta-libro" href="/guitarra/libro/metodo-carcassi/">
+  <div class="tarjeta__cover tarjeta-libro__cover">
+    <img src="/assets/img/covers/libros/guitarra/placeholder-1.svg" alt="Método de guitarra - Carcassi" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Método de guitarra - Carcassi</p>
+    <p class="tarjeta__meta">2 <span data-i18n="partituras">partituras</span></p>
+  </div>
+</a>
+
+    
+      <a class="tarjeta tarjeta-libro" href="/guitarra/libro/progressive-guitar-method-for-young-beginners-book-1/">
+  <div class="tarjeta__cover tarjeta-libro__cover">
+    <img src="/assets/img/covers/libros/guitarra/progressive-guitar-method-for-young-beginners-book-1.webp" alt="Progressive guitar method for young beginners book 1" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Progressive guitar method for young beginners book 1</p>
+    <p class="tarjeta__meta">0 <span data-i18n="partituras">partituras</span></p>
+  </div>
+</a>
+
+    
+  </div>
+</section>
+
+
+<div class="controles">
+  <label>
+    <span data-i18n="ordenarPor">Ordenar por</span>
+    <select id="ordenar-por">
+      <option value="dificultad-asc" data-i18n="dificultad">Dificultad (menor a mayor)</option>
+      <option value="dificultad-desc">Dificultad (mayor a menor)</option>
+      <option value="puntaje-desc">Puntaje (mayor a menor)</option>
+      <option value="puntaje-asc">Puntaje (menor a mayor)</option>
+      <option value="nombre-asc">Nombre (A-Z)</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarDificultad">Filtrar por dificultad</span>
+    <select id="filtro-dificultad">
+      <option value="todas" data-i18n="todas">Todas</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarTipo">Mostrar</span>
+    <select id="filtro-tipo">
+      <option value="todos" data-i18n="todosTipo">Melodías y ejercicios</option>
+      <option value="melodias" data-i18n="soloMelodias">Sólo melodías</option>
+      <option value="ejercicios" data-i18n="soloEjercicios">Sólo ejercicios</option>
+    </select>
+  </label>
+</div>
+
+<div class="grilla-partituras" data-partitura-grid>
+  
+    <a class="tarjeta"
+  href="/partituras/guitarra/stairway-to-heaven-arreglo-s-000005/"
+  data-nombre="Stairway to Heaven (arreglo)"
+  data-puntaje="88.6"
+  data-dificultad="9-Avanzado"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/guitarra/placeholder-5.svg" alt="Stairway to Heaven (arreglo)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Stairway to Heaven (arreglo)</p>
+    <p class="tarjeta__meta">9-Avanzado &middot; 88.6</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/guitarra/recuerdos-de-la-alhambra-s-000003/"
+  data-nombre="Recuerdos de la Alhambra"
+  data-puntaje="78.2"
+  data-dificultad="8-Avanzado"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/guitarra/placeholder-3.svg" alt="Recuerdos de la Alhambra" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Recuerdos de la Alhambra</p>
+    <p class="tarjeta__meta">8-Avanzado &middot; 78.2</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/guitarra/hotel-california-intro-s-000002/"
+  data-nombre="Hotel California (intro)"
+  data-puntaje="43.95"
+  data-dificultad="5-Intermedio"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/guitarra/placeholder-2.svg" alt="Hotel California (intro)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Hotel California (intro)</p>
+    <p class="tarjeta__meta">5-Intermedio &middot; 44.0</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/guitarra/las-mananitas-arreglo-facil-s-000001/"
+  data-nombre="Las Mañanitas (arreglo fácil)"
+  data-puntaje="15.4"
+  data-dificultad="2-Principiante"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/guitarra/placeholder-1.svg" alt="Las Mañanitas (arreglo fácil)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Las Mañanitas (arreglo fácil)</p>
+    <p class="tarjeta__meta">2-Principiante &middot; 15.4</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/guitarra/digitacion-cromatica-s-000004/"
+  data-nombre="Digitación cromática"
+  data-puntaje="8"
+  data-dificultad="1-Principiante"
+  data-ejercicio="true">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/guitarra/placeholder-4.svg" alt="Digitación cromática" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Digitación cromática</p>
+    <p class="tarjeta__meta">1-Principiante &middot; 8.0</p>
+  </div>
+</a>
+
+  
+</div>
+
+
+
+  </main>
+  <footer class="sitio-footer">
+  <div class="contenedor sitio-footer__inner">
+    <p>Partituramanía &mdash; <span data-i18n="footerTexto">catálogo de partituras puntuadas por dificultad</span></p>
+    <a class="enlace-rss" href="/feed.xml">📡 <span data-i18n="suscribirseRss">Suscribirse por RSS</span></a>
+  </div>
+</footer>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/catalogo.js"></script>
+  <script src="/assets/js/reproductor.js"></script>
+  <script src="/assets/js/sorpresa.js"></script>
+  <script src="/assets/js/tema.js"></script>
+</body>
+</html>

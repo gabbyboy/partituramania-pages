@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piano &middot; Partituramanía</title>
+  <meta name="description" content="6 partituras de Piano organizadas por dificultad">
+  <link rel="canonical" href="https://partituramania.com/piano/">
+  <link rel="alternate" type="application/rss+xml" title="Partituramanía" href="/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Partituramanía">
+  <meta property="og:url" content="https://partituramania.com/piano/">
+  <meta property="og:title" content="Piano &middot; Partituramanía">
+  <meta property="og:description" content="6 partituras de Piano organizadas por dificultad">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Piano &middot; Partituramanía">
+  <meta name="twitter:description" content="6 partituras de Piano organizadas por dificultad">
+  
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Anti-parpadeo: si el usuario ya eligió un tema a mano, aplicarlo antes
+    // de pintar la página (si no hizo elección, la preferencia del sistema
+    // ya la resuelve el CSS solo, sin necesidad de JS).
+    (function () {
+      try {
+        var t = localStorage.getItem("pm-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="sitio-header">
+  <div class="contenedor sitio-header__inner">
+    <a class="logo" href="/">Partituramanía</a>
+    <nav class="nav-instrumentos">
+      <a href="/" data-i18n="inicio">Inicio</a>
+      <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+      <a href="/libros/" data-i18n="libros">Libros</a>
+      <a href="/autores/" data-i18n="autores">Autores</a>
+      <a href="/estadisticas/" data-i18n="estadisticas">Estadísticas</a>
+      <button class="boton-sorpresa js-boton-sorpresa" type="button">🎲 <span data-i18n="sorprendeme">Sorpréndeme</span></button>
+    </nav>
+    <div class="sitio-header__botones">
+      <button id="theme-toggle" class="lang-toggle" type="button">🌙</button>
+      <button id="lang-toggle" class="lang-toggle" type="button">🇺🇸</button>
+    </div>
+  </div>
+</header>
+
+  <main class="contenedor">
+    
+<nav class="migas" aria-label="Breadcrumb">
+  <a href="/" data-i18n="inicio">Inicio</a>
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+  
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <span class="migas__actual">Piano</span>
+  
+  
+</nav>
+
+
+<h1 class="titulo-instrumento">Piano</h1>
+<p class="listado-resumen">6 <span data-i18n="partituras">partituras</span></p>
+
+
+<section class="seccion-libros">
+  <h2 data-i18n="libros">Libros</h2>
+  <div class="grilla-libros">
+    
+      <a class="tarjeta tarjeta-libro" href="/piano/libro/bastien-piano-basics-level-1/">
+  <div class="tarjeta__cover tarjeta-libro__cover">
+    <img src="/assets/img/covers/libros/piano/bastien-piano-basics-level-1.webp" alt="Bastien - Piano Basics Level 1" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Bastien - Piano Basics Level 1</p>
+    <p class="tarjeta__meta">1 <span data-i18n="partituras">partituras</span></p>
+  </div>
+</a>
+
+    
+      <a class="tarjeta tarjeta-libro" href="/piano/libro/metodo-piano-basico-vol-1/">
+  <div class="tarjeta__cover tarjeta-libro__cover">
+    <img src="/assets/img/covers/libros/piano/placeholder-1.svg" alt="Método Piano Básico Vol. 1" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Método Piano Básico Vol. 1</p>
+    <p class="tarjeta__meta">2 <span data-i18n="partituras">partituras</span></p>
+  </div>
+</a>
+
+    
+  </div>
+</section>
+
+
+<div class="controles">
+  <label>
+    <span data-i18n="ordenarPor">Ordenar por</span>
+    <select id="ordenar-por">
+      <option value="dificultad-asc" data-i18n="dificultad">Dificultad (menor a mayor)</option>
+      <option value="dificultad-desc">Dificultad (mayor a menor)</option>
+      <option value="puntaje-desc">Puntaje (mayor a menor)</option>
+      <option value="puntaje-asc">Puntaje (menor a mayor)</option>
+      <option value="nombre-asc">Nombre (A-Z)</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarDificultad">Filtrar por dificultad</span>
+    <select id="filtro-dificultad">
+      <option value="todas" data-i18n="todas">Todas</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarTipo">Mostrar</span>
+    <select id="filtro-tipo">
+      <option value="todos" data-i18n="todosTipo">Melodías y ejercicios</option>
+      <option value="melodias" data-i18n="soloMelodias">Sólo melodías</option>
+      <option value="ejercicios" data-i18n="soloEjercicios">Sólo ejercicios</option>
+    </select>
+  </label>
+</div>
+
+<div class="grilla-partituras" data-partitura-grid>
+  
+    <a class="tarjeta"
+  href="/partituras/piano/nocturno-op-9-no-2-s-000005/"
+  data-nombre="Nocturno Op.9 No.2"
+  data-puntaje="82.7"
+  data-dificultad="8-Avanzado"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-5.svg" alt="Nocturno Op.9 No.2" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Nocturno Op.9 No.2</p>
+    <p class="tarjeta__meta">8-Avanzado &middot; 82.7</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/piano/clair-de-lune-s-000002/"
+  data-nombre="Clair de Lune"
+  data-puntaje="70.3"
+  data-dificultad="7-Avanzado"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-2.svg" alt="Clair de Lune" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Clair de Lune</p>
+    <p class="tarjeta__meta">7-Avanzado &middot; 70.3</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/piano/fur-elise-fragmento-s-000001/"
+  data-nombre="Für Elise (fragmento)"
+  data-puntaje="35"
+  data-dificultad="4-Intermedio"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-1.svg" alt="Für Elise (fragmento)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Für Elise (fragmento)</p>
+    <p class="tarjeta__meta">4-Intermedio &middot; 35.0</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/piano/the-banks-of-ohio-p-000002/"
+  data-nombre="The banks of Ohio"
+  data-puntaje="24.27"
+  data-dificultad="1-Novato"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-2.svg" alt="The banks of Ohio" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">The banks of Ohio</p>
+    <p class="tarjeta__meta">1-Novato &middot; 24.3</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/piano/himno-a-la-alegria-simplificado-s-000003/"
+  data-nombre="Himno a la Alegría (simplificado)"
+  data-puntaje="14.2"
+  data-dificultad="2-Principiante"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-3.svg" alt="Himno a la Alegría (simplificado)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Himno a la Alegría (simplificado)</p>
+    <p class="tarjeta__meta">2-Principiante &middot; 14.2</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/piano/escalas-mayores-do-m-s-000004/"
+  data-nombre="Escalas mayores - Do M"
+  data-puntaje="5"
+  data-dificultad="1-Principiante"
+  data-ejercicio="true">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/piano/placeholder-4.svg" alt="Escalas mayores - Do M" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Escalas mayores - Do M</p>
+    <p class="tarjeta__meta">1-Principiante &middot; 5.0</p>
+  </div>
+</a>
+
+  
+</div>
+
+
+
+  </main>
+  <footer class="sitio-footer">
+  <div class="contenedor sitio-footer__inner">
+    <p>Partituramanía &mdash; <span data-i18n="footerTexto">catálogo de partituras puntuadas por dificultad</span></p>
+    <a class="enlace-rss" href="/feed.xml">📡 <span data-i18n="suscribirseRss">Suscribirse por RSS</span></a>
+  </div>
+</footer>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/catalogo.js"></script>
+  <script src="/assets/js/reproductor.js"></script>
+  <script src="/assets/js/sorpresa.js"></script>
+  <script src="/assets/js/tema.js"></script>
+</body>
+</html>

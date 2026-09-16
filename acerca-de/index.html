@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de &middot; Partituramanía</title>
+  <meta name="description" content="Catálogo de partituras organizadas por instrumento y dificultad">
+  <link rel="canonical" href="https://partituramania.com/acerca-de/">
+  <link rel="alternate" type="application/rss+xml" title="Partituramanía" href="/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Partituramanía">
+  <meta property="og:url" content="https://partituramania.com/acerca-de/">
+  <meta property="og:title" content="Acerca de &middot; Partituramanía">
+  <meta property="og:description" content="Catálogo de partituras organizadas por instrumento y dificultad">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Acerca de &middot; Partituramanía">
+  <meta name="twitter:description" content="Catálogo de partituras organizadas por instrumento y dificultad">
+  
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Anti-parpadeo: si el usuario ya eligió un tema a mano, aplicarlo antes
+    // de pintar la página (si no hizo elección, la preferencia del sistema
+    // ya la resuelve el CSS solo, sin necesidad de JS).
+    (function () {
+      try {
+        var t = localStorage.getItem("pm-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="sitio-header">
+  <div class="contenedor sitio-header__inner">
+    <a class="logo" href="/">Partituramanía</a>
+    <nav class="nav-instrumentos">
+      <a href="/" data-i18n="inicio">Inicio</a>
+      <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+      <a href="/libros/" data-i18n="libros">Libros</a>
+      <a href="/autores/" data-i18n="autores">Autores</a>
+      <a href="/estadisticas/" data-i18n="estadisticas">Estadísticas</a>
+      <a href="/acerca-de/" data-i18n="acercaDe">Acerca de</a>
+      <button class="boton-sorpresa js-boton-sorpresa" type="button">🎲 <span data-i18n="sorprendeme">Sorpréndeme</span></button>
+    </nav>
+    <div class="sitio-header__botones">
+      <button id="theme-toggle" class="lang-toggle" type="button">🌙</button>
+      <button id="lang-toggle" class="lang-toggle" type="button">🇺🇸</button>
+    </div>
+  </div>
+</header>
+
+  <main class="contenedor">
+    
+<nav class="migas" aria-label="Breadcrumb">
+  <a href="/" data-i18n="inicio">Inicio</a>
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <span class="migas__actual" data-i18n="acercaDe">Acerca de</span>
+  
+  
+</nav>
+
+
+<h1 data-i18n="acercaDe">Acerca de</h1>
+
+<div class="pagina-texto">
+  <!-- TODO: reemplazar este texto por el tuyo. -->
+  <p>
+    Partituramanía nació de una necesidad simple: tengo carpetas y carpetas de partituras
+    juntadas con los años, y nunca sabía por dónde empezar ni qué tan difícil era en realidad
+    cada una hasta sentarme a tocarla.
+  </p>
+  <p>
+    Así que empecé a puntuar cada partitura por dificultad, a mano, a mi criterio, y a
+    organizarlas por instrumento. Este sitio es esa colección puesta en orden: un catálogo
+    público, sin login, para poder buscar algo acorde a mi nivel del día y no perder tiempo
+    adivinando.
+  </p>
+  <p>
+    No es un sitio para subir tus propias partituras ni una red social — es mi catálogo
+    personal, abierto por si a alguien más le sirve.
+  </p>
+</div>
+
+  </main>
+  <footer class="sitio-footer">
+  <div class="contenedor sitio-footer__inner">
+    <p>Partituramanía &mdash; <span data-i18n="footerTexto">catálogo de partituras puntuadas por dificultad</span></p>
+    <a class="enlace-rss" href="/feed.xml">📡 <span data-i18n="suscribirseRss">Suscribirse por RSS</span></a>
+  </div>
+</footer>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/catalogo.js"></script>
+  <script src="/assets/js/reproductor.js"></script>
+  <script src="/assets/js/sorpresa.js"></script>
+  <script src="/assets/js/tema.js"></script>
+</body>
+</html>

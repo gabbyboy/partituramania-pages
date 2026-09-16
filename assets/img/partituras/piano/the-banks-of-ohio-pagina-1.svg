@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1200">
+  <rect width="850" height="1200" fill="#ffffff"/>
+  <text x="425" y="110" font-family="Georgia, serif" font-size="46" fill="#1a1a1a" text-anchor="middle">The banks of Ohio</text>
+  <text x="60" y="160" font-family="Georgia, serif" font-size="20" fill="#1a1a1a">Transcripción por Gabriel Kaplan</text>
+  <text x="90" y="200" font-family="Georgia, serif" font-size="18" fill="#1a1a1a" font-weight="bold">♩ = 106</text>
+
+  <g stroke="#1a1a1a" stroke-width="1.5">
+    <line x1="60" y1="260" x2="790" y2="260"/>
+    <line x1="60" y1="280" x2="790" y2="280"/>
+    <line x1="60" y1="300" x2="790" y2="300"/>
+    <line x1="60" y1="320" x2="790" y2="320"/>
+    <line x1="60" y1="340" x2="790" y2="340"/>
+
+    <line x1="60" y1="420" x2="790" y2="420"/>
+    <line x1="60" y1="440" x2="790" y2="440"/>
+    <line x1="60" y1="460" x2="790" y2="460"/>
+    <line x1="60" y1="480" x2="790" y2="480"/>
+    <line x1="60" y1="500" x2="790" y2="500"/>
+
+    <line x1="60" y1="580" x2="790" y2="580"/>
+    <line x1="60" y1="600" x2="790" y2="600"/>
+    <line x1="60" y1="620" x2="790" y2="620"/>
+    <line x1="60" y1="640" x2="790" y2="640"/>
+    <line x1="60" y1="660" x2="790" y2="660"/>
+
+    <line x1="60" y1="740" x2="790" y2="740"/>
+    <line x1="60" y1="760" x2="790" y2="760"/>
+    <line x1="60" y1="780" x2="790" y2="780"/>
+    <line x1="60" y1="800" x2="790" y2="800"/>
+    <line x1="60" y1="820" x2="790" y2="820"/>
+  </g>
+  <text x="790" y="1170" font-family="Georgia, serif" font-size="16" fill="#999" text-anchor="end">Página de ejemplo — reemplazar por el archivo real</text>
+</svg>

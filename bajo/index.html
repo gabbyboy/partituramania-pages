@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bajo &middot; Partituramanía</title>
+  <meta name="description" content="5 partituras de Bajo organizadas por dificultad">
+  <link rel="canonical" href="https://partituramania.com/bajo/">
+  <link rel="alternate" type="application/rss+xml" title="Partituramanía" href="/feed.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Partituramanía">
+  <meta property="og:url" content="https://partituramania.com/bajo/">
+  <meta property="og:title" content="Bajo &middot; Partituramanía">
+  <meta property="og:description" content="5 partituras de Bajo organizadas por dificultad">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bajo &middot; Partituramanía">
+  <meta name="twitter:description" content="5 partituras de Bajo organizadas por dificultad">
+  
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Anti-parpadeo: si el usuario ya eligió un tema a mano, aplicarlo antes
+    // de pintar la página (si no hizo elección, la preferencia del sistema
+    // ya la resuelve el CSS solo, sin necesidad de JS).
+    (function () {
+      try {
+        var t = localStorage.getItem("pm-theme");
+        if (t === "light" || t === "dark") {
+          document.documentElement.setAttribute("data-theme", t);
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <header class="sitio-header">
+  <div class="contenedor sitio-header__inner">
+    <a class="logo" href="/">Partituramanía</a>
+    <nav class="nav-instrumentos">
+      <a href="/" data-i18n="inicio">Inicio</a>
+      <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+      <a href="/libros/" data-i18n="libros">Libros</a>
+      <a href="/autores/" data-i18n="autores">Autores</a>
+      <a href="/estadisticas/" data-i18n="estadisticas">Estadísticas</a>
+      <button class="boton-sorpresa js-boton-sorpresa" type="button">🎲 <span data-i18n="sorprendeme">Sorpréndeme</span></button>
+    </nav>
+    <div class="sitio-header__botones">
+      <button id="theme-toggle" class="lang-toggle" type="button">🌙</button>
+      <button id="lang-toggle" class="lang-toggle" type="button">🇺🇸</button>
+    </div>
+  </div>
+</header>
+
+  <main class="contenedor">
+    
+<nav class="migas" aria-label="Breadcrumb">
+  <a href="/" data-i18n="inicio">Inicio</a>
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <a href="/instrumentos/" data-i18n="instrumentos">Instrumentos</a>
+  
+  
+  <span class="migas__separador" aria-hidden="true">/</span>
+  
+  <span class="migas__actual">Bajo</span>
+  
+  
+</nav>
+
+
+<h1 class="titulo-instrumento">Bajo</h1>
+<p class="listado-resumen">5 <span data-i18n="partituras">partituras</span></p>
+
+
+<section class="seccion-libros">
+  <h2 data-i18n="libros">Libros</h2>
+  <div class="grilla-libros">
+    
+      <a class="tarjeta tarjeta-libro" href="/bajo/libro/iniciacion-al-bajo-electrico/">
+  <div class="tarjeta__cover tarjeta-libro__cover">
+    <img src="/assets/img/covers/libros/bajo/placeholder-1.svg" alt="Iniciación al bajo eléctrico" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Iniciación al bajo eléctrico</p>
+    <p class="tarjeta__meta">2 <span data-i18n="partituras">partituras</span></p>
+  </div>
+</a>
+
+    
+  </div>
+</section>
+
+
+<div class="controles">
+  <label>
+    <span data-i18n="ordenarPor">Ordenar por</span>
+    <select id="ordenar-por">
+      <option value="dificultad-asc" data-i18n="dificultad">Dificultad (menor a mayor)</option>
+      <option value="dificultad-desc">Dificultad (mayor a menor)</option>
+      <option value="puntaje-desc">Puntaje (mayor a menor)</option>
+      <option value="puntaje-asc">Puntaje (menor a mayor)</option>
+      <option value="nombre-asc">Nombre (A-Z)</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarDificultad">Filtrar por dificultad</span>
+    <select id="filtro-dificultad">
+      <option value="todas" data-i18n="todas">Todas</option>
+    </select>
+  </label>
+  <label>
+    <span data-i18n="filtrarTipo">Mostrar</span>
+    <select id="filtro-tipo">
+      <option value="todos" data-i18n="todosTipo">Melodías y ejercicios</option>
+      <option value="melodias" data-i18n="soloMelodias">Sólo melodías</option>
+      <option value="ejercicios" data-i18n="soloEjercicios">Sólo ejercicios</option>
+    </select>
+  </label>
+</div>
+
+<div class="grilla-partituras" data-partitura-grid>
+  
+    <a class="tarjeta"
+  href="/partituras/bajo/portrait-of-tracy-s-000002/"
+  data-nombre="Portrait of Tracy"
+  data-puntaje="91"
+  data-dificultad="9-Avanzado"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/bajo/placeholder-2.svg" alt="Portrait of Tracy" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Portrait of Tracy</p>
+    <p class="tarjeta__meta">9-Avanzado &middot; 91.0</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/bajo/higher-ground-linea-de-bajo-s-000005/"
+  data-nombre="Higher Ground (línea de bajo)"
+  data-puntaje="58.9"
+  data-dificultad="6-Intermedio"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/bajo/placeholder-5.svg" alt="Higher Ground (línea de bajo)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Higher Ground (línea de bajo)</p>
+    <p class="tarjeta__meta">6-Intermedio &middot; 58.9</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/bajo/another-one-bites-the-dust-linea-de-bajo-s-000003/"
+  data-nombre="Another One Bites the Dust (línea de bajo)"
+  data-puntaje="46.5"
+  data-dificultad="5-Intermedio"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/bajo/placeholder-3.svg" alt="Another One Bites the Dust (línea de bajo)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Another One Bites the Dust (línea de bajo)</p>
+    <p class="tarjeta__meta">5-Intermedio &middot; 46.5</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/bajo/come-as-you-are-riff-s-000001/"
+  data-nombre="Come As You Are (riff)"
+  data-puntaje="24.1"
+  data-dificultad="3-Principiante"
+  data-ejercicio="false">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/bajo/placeholder-1.svg" alt="Come As You Are (riff)" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Come As You Are (riff)</p>
+    <p class="tarjeta__meta">3-Principiante &middot; 24.1</p>
+  </div>
+</a>
+
+  
+    <a class="tarjeta"
+  href="/partituras/bajo/walking-bass-en-blues-de-do-s-000004/"
+  data-nombre="Walking bass en Blues de Do"
+  data-puntaje="18"
+  data-dificultad="3-Principiante"
+  data-ejercicio="true">
+  <div class="tarjeta__cover">
+    <img src="/assets/img/covers/partituras/bajo/placeholder-4.svg" alt="Walking bass en Blues de Do" loading="lazy" width="400" height="400">
+  </div>
+  <div class="tarjeta__info">
+    <p class="tarjeta__nombre">Walking bass en Blues de Do</p>
+    <p class="tarjeta__meta">3-Principiante &middot; 18.0</p>
+  </div>
+</a>
+
+  
+</div>
+
+
+
+  </main>
+  <footer class="sitio-footer">
+  <div class="contenedor sitio-footer__inner">
+    <p>Partituramanía &mdash; <span data-i18n="footerTexto">catálogo de partituras puntuadas por dificultad</span></p>
+    <a class="enlace-rss" href="/feed.xml">📡 <span data-i18n="suscribirseRss">Suscribirse por RSS</span></a>
+  </div>
+</footer>
+
+  <script src="/assets/js/i18n.js"></script>
+  <script src="/assets/js/catalogo.js"></script>
+  <script src="/assets/js/reproductor.js"></script>
+  <script src="/assets/js/sorpresa.js"></script>
+  <script src="/assets/js/tema.js"></script>
+</body>
+</html>

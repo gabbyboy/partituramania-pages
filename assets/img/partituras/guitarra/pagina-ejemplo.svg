@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 1100">
+  <rect width="850" height="1100" fill="#ffffff" stroke="#ccc" stroke-width="2"/>
+  <text x="425" y="540" font-family="Georgia, serif" font-size="32" fill="#999" text-anchor="middle">Página de partitura (placeholder)</text>
+  <text x="425" y="580" font-family="Georgia, serif" font-size="20" fill="#bbb" text-anchor="middle">Reemplazar por el archivo real</text>
+</svg>

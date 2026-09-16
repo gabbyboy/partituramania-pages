@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Partituramanía</title>
+    <link>https://partituramania.com/</link>
+    <description>Catálogo de partituras organizadas por instrumento y dificultad</description>
+    <language>es</language>
+    <atom:link href="https://partituramania.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libros, capítulos y reproductor de audio</title>
+      <link>https://partituramania.com/</link>
+      <guid isPermaLink="false">https://partituramania.com/feed.xml#2026-09-15-libros-capitulos-y-reproductor-de-audio</guid>
+      <pubDate>Tue, 15 Sep 2026 03:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Esta semana el catálogo sumó varias funciones nuevas: las partituras ahora pueden agruparse en <strong>libros</strong> con capítulos, cada libro muestra un índice ordenado, y las partituras que tengan un archivo de audio muestran un botón para escucharlas directamente en la página.</p>
+<p>También se reorganizaron las carpetas de imágenes por instrumento para que sigan siendo manejables a medida que el catálogo crezca.</p>
+]]></description>
+    </item>
+    <item>
+      <title>¡Arranca Partituramanía!</title>
+      <link>https://partituramania.com/</link>
+      <guid isPermaLink="false">https://partituramania.com/feed.xml#2026-09-14-arranca-partituramania</guid>
+      <pubDate>Mon, 14 Sep 2026 03:00:00 GMT</pubDate>
+      <description><![CDATA[<p>Este es el primer post del catálogo. La idea es ir compartiendo acá las novedades a medida que se agregan partituras, instrumentos y funciones nuevas — sin necesidad de entrar a cada partitura para enterarse de qué cambió.</p>
+<p>Por ahora hay partituras de guitarra, piano y bajo, organizadas por dificultad y puntaje.</p>
+]]></description>
+    </item>
+  </channel>
+</rss>
