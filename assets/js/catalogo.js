@@ -9,7 +9,6 @@
     var tarjetas = Array.prototype.slice.call(grilla.children);
     var selectOrden = document.getElementById("ordenar-por");
     var selectFiltroDificultad = document.getElementById("filtro-dificultad");
-    var selectFiltroTipo = document.getElementById("filtro-tipo");
 
     function numeroDificultad(dificultad) {
       var n = parseFloat(dificultad);
@@ -18,18 +17,22 @@
 
     function poblarFiltroDificultad() {
       if (!selectFiltroDificultad) return;
-      var valores = [];
+      var vistos = {};
+      var opciones = [];
       tarjetas.forEach(function (t) {
         var d = t.dataset.dificultad;
-        if (d && valores.indexOf(d) === -1) valores.push(d);
+        if (d && !vistos[d]) {
+          vistos[d] = true;
+          opciones.push({ valor: d, texto: t.dataset.dificultadMostrada || d });
+        }
       });
-      valores.sort(function (a, b) {
-        return numeroDificultad(a) - numeroDificultad(b);
+      opciones.sort(function (a, b) {
+        return numeroDificultad(a.valor) - numeroDificultad(b.valor);
       });
-      valores.forEach(function (v) {
+      opciones.forEach(function (o) {
         var opt = document.createElement("option");
-        opt.value = v;
-        opt.textContent = v;
+        opt.value = o.valor;
+        opt.textContent = o.texto;
         selectFiltroDificultad.appendChild(opt);
       });
     }
@@ -57,17 +60,10 @@
 
     function filtrar() {
       var valorDificultad = selectFiltroDificultad ? selectFiltroDificultad.value : "todas";
-      var valorTipo = selectFiltroTipo ? selectFiltroTipo.value : "todos";
 
       tarjetas.forEach(function (t) {
         var pasaDificultad = valorDificultad === "todas" || t.dataset.dificultad === valorDificultad;
-        var esEjercicio = t.dataset.ejercicio === "true";
-        var pasaTipo =
-          valorTipo === "todos" ||
-          (valorTipo === "melodias" && !esEjercicio) ||
-          (valorTipo === "ejercicios" && esEjercicio);
-
-        t.hidden = !(pasaDificultad && pasaTipo);
+        t.hidden = !pasaDificultad;
       });
     }
 
@@ -82,10 +78,6 @@
 
     if (selectFiltroDificultad) {
       selectFiltroDificultad.addEventListener("change", filtrar);
-    }
-
-    if (selectFiltroTipo) {
-      selectFiltroTipo.addEventListener("change", filtrar);
     }
   });
 })();
